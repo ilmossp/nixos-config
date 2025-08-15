@@ -24,6 +24,7 @@
     ani-cli
     mpv
     wl-clipboard
+    spotify
   ];
 
   # Let Home Manager manage itself
