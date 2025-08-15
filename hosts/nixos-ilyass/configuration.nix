@@ -86,6 +86,9 @@
     users = {
       "ilyass" = import ../../home/ilyass/home.nix;
     };
+    # Pass nixpkgs config to Home Manager
+    useGlobalPkgs = true;
+    useUserPackages = true;
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -105,8 +108,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim
-  #  wget
+    gcc
   ];
 
   # services.openssh.enable = true;
