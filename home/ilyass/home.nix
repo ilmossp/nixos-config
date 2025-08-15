@@ -24,7 +24,6 @@
     ani-cli
     mpv
     wl-clipboard
-    gcc
   ];
 
   # Let Home Manager manage itself
