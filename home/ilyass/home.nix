@@ -27,7 +27,9 @@
     spotify
     heroic
     lutris
-    steam
+    prismlauncher
+    temurin-bin-21
+    anyrun
   ];
 
   # Let Home Manager manage itself

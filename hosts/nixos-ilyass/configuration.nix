@@ -108,6 +108,9 @@
   #enable gamemode
   programs.gamemode.enable = true;
 
+  #enable steam
+  programs.steam.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
