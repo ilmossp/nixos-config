@@ -30,6 +30,9 @@
     prismlauncher
     temurin-bin-21
     anyrun
+    hyprpaper
+    quickshell
+    dunst
   ];
 
   # Let Home Manager manage itself
