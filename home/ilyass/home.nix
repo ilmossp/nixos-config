@@ -25,6 +25,9 @@
     mpv
     wl-clipboard
     spotify
+    heroic
+    lutris
+    steam
   ];
 
   # Let Home Manager manage itself

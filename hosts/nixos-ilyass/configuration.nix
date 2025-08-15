@@ -105,10 +105,13 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  #enable gamemode
+  programs.gamemode.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    gcc
+    ntfs3g
   ];
 
   # services.openssh.enable = true;
