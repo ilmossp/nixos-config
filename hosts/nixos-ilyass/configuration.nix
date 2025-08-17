@@ -115,6 +115,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     ntfs3g
+    bottles
   ];
 
   # services.openssh.enable = true;

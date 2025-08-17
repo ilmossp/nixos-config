@@ -33,6 +33,8 @@
     hyprpaper
     quickshell
     dunst
+    pavucontrol
+    quickshell
   ];
 
 
