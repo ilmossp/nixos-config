@@ -35,6 +35,8 @@
     dunst
     pavucontrol
     quickshell
+    stremio
+    bat
   ];
 
 

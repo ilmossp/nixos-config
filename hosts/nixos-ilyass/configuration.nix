@@ -78,7 +78,7 @@
   users.users.ilyass = {
     isNormalUser = true;
     description = "ilyass";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "adbusers" ];
   };
 
   home-manager = {
@@ -116,8 +116,12 @@
   environment.systemPackages = with pkgs; [
     ntfs3g
     bottles
+    usbutils
+    gcc
+    cargo
   ];
 
+  programs.adb.enable = true;
   # services.openssh.enable = true;
 
   # networking.firewall.allowedTCPPorts = [ ... ];
