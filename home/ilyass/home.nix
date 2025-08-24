@@ -37,6 +37,7 @@
     quickshell
     stremio
     bat
+    telegram-desktop
   ];
 
 

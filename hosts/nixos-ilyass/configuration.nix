@@ -119,6 +119,7 @@
     usbutils
     gcc
     cargo
+    gparted
   ];
 
   programs.adb.enable = true;
