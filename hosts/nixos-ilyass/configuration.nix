@@ -119,7 +119,9 @@
     usbutils
     gcc
     cargo
-    gparted
+    gparted    
+    mangohud
+    gamescope
   ];
 
   programs.adb.enable = true;

@@ -38,6 +38,8 @@
     stremio
     bat
     telegram-desktop
+    unrar
+    openrgb-with-all-plugins
   ];
 
 
