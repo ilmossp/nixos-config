@@ -41,7 +41,6 @@
     unrar
     openrgb-with-all-plugins
     brave
-    zed-editor-fhs
     ];
 
 
