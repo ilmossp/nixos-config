@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -82,7 +82,7 @@
   };
 
   home-manager = {
-    extraSpecialArgs = { };
+    extraSpecialArgs = { inherit inputs; };
     users = {
       "ilyass" = import ../../home/ilyass/home.nix;
     };
@@ -122,6 +122,10 @@
     gparted    
     mangohud
     gamescope
+    
+    # KWin Force Blur effects for both Wayland and X11
+    inputs.kwin-effects-forceblur.packages.${pkgs.system}.default
+    inputs.kwin-effects-forceblur.packages.${pkgs.system}.x11
   ];
 
   programs.adb.enable = true;

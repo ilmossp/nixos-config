@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   home.username = "ilyass";
@@ -41,6 +41,8 @@
     unrar
     openrgb-with-all-plugins
     brave
+    nerd-fonts.jetbrains-mono
+    rofi-wayland
     ];
 
 
