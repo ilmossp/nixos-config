@@ -43,6 +43,16 @@
     brave
     nerd-fonts.jetbrains-mono
     rofi-wayland
+   libsForQt5.qtstyleplugin-kvantum
+    qt6Packages.qtstyleplugin-kvantum
+
+    # The Kvantum Manager application
+    themechanger
+    kdePackages.qtstyleplugin-kvantum
+
+    # Qt Theme Configuration utility (optional but highly recommended)
+    libsForQt5.qt5ct
+    qt6Packages.qt6ct
     ];
 
 
