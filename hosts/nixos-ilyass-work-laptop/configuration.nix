@@ -7,7 +7,7 @@
 {
   imports = [
     # Include the results of the hardware scan.
-    ../../hardware/nixos-ilyass/hardware-configuration.nix
+    ../../hardware/nixos-ilyass-work-laptop/hardware-configuration.nix
   ];
 
   # Bootloader.
@@ -15,15 +15,16 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.luks.devices = {
-  root = {
-    device = "/dev/nvme0n1p2";
-     preLVM = true;
-   };
+    root = {
+      device = "/dev/nvme0n1p2";
+      preLVM = true;
+    };
+  };
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nixos-ilyass"; # Define your hostname.
+  networking.hostName = "nixos-ilyass-work-laptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
