@@ -1,6 +1,9 @@
 { config, pkgs, inputs, ... }:
 
 {
+  imports = [
+    inputs.zen-browser.homeModules.twilight
+  ];
   home.username = "ilyass";
   home.homeDirectory = "/home/ilyass";
 
@@ -11,7 +14,6 @@
   home.packages = with pkgs; [
     kdePackages.kate
     neovim
-    code-cursor
     ghostty
     zoxide
     starship
@@ -53,10 +55,14 @@
     # Qt Theme Configuration utility (optional but highly recommended)
     libsForQt5.qt5ct
     qt6Packages.qt6ct
+    slack
     ];
 
 
 
   # Let Home Manager manage itself
   programs.home-manager.enable = true;
+
+  # Zen Browser
+  programs.zen-browser.enable = true;
 }
