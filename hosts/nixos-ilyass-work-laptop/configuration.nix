@@ -41,15 +41,15 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
-    LC_ADDRESS = "ar_MA.UTF-8";
-    LC_IDENTIFICATION = "ar_MA.UTF-8";
-    LC_MEASUREMENT = "ar_MA.UTF-8";
-    LC_MONETARY = "ar_MA.UTF-8";
-    LC_NAME = "ar_MA.UTF-8";
-    LC_NUMERIC = "ar_MA.UTF-8";
-    LC_PAPER = "ar_MA.UTF-8";
-    LC_TELEPHONE = "ar_MA.UTF-8";
-    LC_TIME = "ar_MA.UTF-8";
+    LC_ADDRESS = "en_US.UTF-8";
+    LC_IDENTIFICATION = "en_US.UTF-8";
+    LC_MEASUREMENT = "en_US.UTF-8";
+    LC_MONETARY = "en_US.UTF-8";
+    LC_NAME = "en_US.UTF-8";
+    LC_NUMERIC = "en_US.UTF-8";
+    LC_PAPER = "en_US.UTF-8";
+    LC_TELEPHONE = "en_US.UTF-8";
+    LC_TIME = "en_US.UTF-8";
   };
 
   # Enable the X11 windowing system.
@@ -113,6 +113,17 @@
   #install fish
   programs.fish.enable = true;
 
+  # Use fish when bash is started interactively
+  programs.bash = {
+    interactiveShellInit = ''
+      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
+      then
+        shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
+        exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
+      fi
+    '';
+  };
+
   #enable hyprland
   programs.hyprland.enable = true;
 
@@ -137,6 +148,7 @@
     mangohud
     gamescope
     gnome-tweaks
+    gnome-extensions-cli
   ];
 
   programs.adb.enable = true;
