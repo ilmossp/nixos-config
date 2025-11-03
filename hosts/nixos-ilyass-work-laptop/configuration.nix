@@ -58,14 +58,7 @@
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome = {
-      enable = true;
-      extraGSettingsOverridePackages = [ pkgs.mutter ];
-      extraGSettingsOverrides = ''
-        [org.gnome.mutter]
-        experimental-features=['scale-monitor-framebuffer']
-      '';
-    };
+  services.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -144,11 +137,13 @@
     usbutils
     gcc
     cargo
-    gparted    
+    gparted
     mangohud
     gamescope
     gnome-tweaks
     gnome-extensions-cli
+    go
+    gnumake
   ];
 
   programs.adb.enable = true;
@@ -159,6 +154,10 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # networking.firewall.enable = false;
+
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  nix.package = pkgs.lixPackageSets.stable.lix;
 
   system.stateVersion = "25.05";
 
