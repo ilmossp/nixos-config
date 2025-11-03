@@ -58,7 +58,14 @@
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  services.desktopManager.gnome = {
+      enable = true;
+      extraGSettingsOverridePackages = [ pkgs.mutter ];
+      extraGSettingsOverrides = ''
+        [org.gnome.mutter]
+        experimental-features=['scale-monitor-framebuffer']
+      '';
+    };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -129,6 +136,7 @@
     gparted    
     mangohud
     gamescope
+    gnome-tweaks
   ];
 
   programs.adb.enable = true;
