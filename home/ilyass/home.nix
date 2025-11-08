@@ -55,10 +55,13 @@
     # Qt Theme Configuration utility (optional but highly recommended)
     libsForQt5.qt5ct
     qt6Packages.qt6ct
-    
+
     slack
     appimage-run
+    godot
+    direnv
     ];
+
 
 
 
