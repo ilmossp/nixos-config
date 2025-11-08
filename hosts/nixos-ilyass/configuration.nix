@@ -119,10 +119,10 @@
     usbutils
     gcc
     cargo
-    gparted    
+    gparted
     mangohud
     gamescope
-    
+
     # KWin Force Blur effects for both Wayland and X11
     inputs.kwin-effects-forceblur.packages.${pkgs.system}.default
     inputs.kwin-effects-forceblur.packages.${pkgs.system}.x11

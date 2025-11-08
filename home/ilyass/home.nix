@@ -28,7 +28,6 @@
     wl-clipboard
     spotify
     heroic
-    lutris
     prismlauncher
     temurin-bin-21
     anyrun
@@ -37,15 +36,14 @@
     dunst
     pavucontrol
     quickshell
-    stremio
     bat
     telegram-desktop
     unrar
     openrgb-with-all-plugins
     brave
     nerd-fonts.jetbrains-mono
-    rofi-wayland
-   libsForQt5.qtstyleplugin-kvantum
+    rofi
+    libsForQt5.qtstyleplugin-kvantum
     qt6Packages.qtstyleplugin-kvantum
 
     # The Kvantum Manager application
@@ -60,6 +58,7 @@
     appimage-run
     godot
     direnv
+    zed-editor
     ];
 
 
