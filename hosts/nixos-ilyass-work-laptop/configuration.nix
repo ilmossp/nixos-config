@@ -148,6 +148,7 @@
 
   programs.adb.enable = true;
 
+  programs.niri.enable = true;
   services.flatpak.enable = true;
   # services.openssh.enable = true;
 
