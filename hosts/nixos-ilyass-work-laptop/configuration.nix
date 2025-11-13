@@ -151,7 +151,8 @@
   programs.niri.enable = true;
   services.flatpak.enable = true;
   # services.openssh.enable = true;
-
+  
+  virtualisation.docker.enable = true;
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # networking.firewall.enable = false;
