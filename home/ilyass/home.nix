@@ -59,6 +59,7 @@
     godot
     direnv
     zed-editor
+    code-cursor
     ];
 
 

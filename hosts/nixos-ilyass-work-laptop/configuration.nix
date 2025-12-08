@@ -85,7 +85,7 @@
   users.users.ilyass = {
     isNormalUser = true;
     description = "ilyass";
-    extraGroups = [ "networkmanager" "wheel" "adbusers" ];
+    extraGroups = [ "networkmanager" "wheel" "adbusers" "docker" ];
   };
 
   home-manager = {
