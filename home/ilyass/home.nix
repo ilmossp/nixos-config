@@ -62,6 +62,7 @@
     code-cursor
 
     kdePackages.okular
+    kdePackages.filelight
     ];
 
 
