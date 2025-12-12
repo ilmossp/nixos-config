@@ -151,7 +151,7 @@
   programs.niri.enable = true;
   services.flatpak.enable = true;
   # services.openssh.enable = true;
-  
+
   virtualisation.docker.enable = true;
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
@@ -160,6 +160,8 @@
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   nix.package = pkgs.lixPackageSets.stable.lix;
+
+  programs.nix-ld.enable = true;
 
   system.stateVersion = "25.05";
 
