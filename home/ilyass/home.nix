@@ -60,6 +60,8 @@
     direnv
     zed-editor
     code-cursor
+
+    kdePackages.okular
     ];
 
 
